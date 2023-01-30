@@ -15,7 +15,7 @@
 <div class="container">
 	
 	<h2>비회원제 답변형 게시판</h2>
-	<h3>전체페이지:${totalPage } / 현제페이지:${nowPage }</h3>
+	<h3>전체페이지:${totalPage } / 현재페이지:${nowPage }</h3>
 
 	<!-- 검색폼 -->
 	<form method="get">
@@ -68,8 +68,7 @@
 					<tr>
 						<td class="text-center">${row.virtualNum }</td>
 						<td class="text-left">
-							<a href="./view.do?idx=${row.idx}
-								&nowPage=${nowPage}">${row.title}</a>
+							<a href="./view.do?idx=${row.idx}&nowPage=${nowPage}">${row.title}</a>
 						</td>
 						<td class="text-center">${row.name }</td>
 						<td class="text-center">${row.hits }</td>

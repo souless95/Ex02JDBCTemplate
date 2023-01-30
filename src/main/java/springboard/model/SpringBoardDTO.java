@@ -6,7 +6,7 @@ public class SpringBoardDTO {
 	private int idx; /* 일련번호 */
 	private String name; 
 	private String title;
-	private String content;
+	private String contents;
 	private Date postdate;
 	private int hits; /* 조회수 */
 	private int bgroup; /* 답변글의 그룹 일련번호 */
@@ -33,12 +33,6 @@ public class SpringBoardDTO {
 	}
 	public void setTitle(String title) {
 		this.title = title;
-	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
 	}
 	public Date getPostdate() {
 		return postdate;
@@ -81,6 +75,12 @@ public class SpringBoardDTO {
 	}
 	public void setVirtualNum(int virtualNum) {
 		this.virtualNum = virtualNum;
+	}
+	public String getContents() {
+		return contents;
+	}
+	public void setContents(String contents) {
+		this.contents = contents;
 	}
 	 
 	 
