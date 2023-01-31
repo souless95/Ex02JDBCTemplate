@@ -9,6 +9,12 @@
 	<link rel="stylesheet" href="../static/bootstrap5.3.0/css/bootstrap.min.css">
 	<script src="../static/bootstrap5.3.0/js/bootstrap.bundle.min.js"></script>
 	<script src="../static/jquery/jquery-3.6.3.min.js"></script>
+	<style>
+	a{text-decoration:none;}
+	a:hover {
+	text-decoration: underline; color:blue;
+	}
+	</style>
 <title>Insert title here</title>
 </head>
 <body>
@@ -79,6 +85,13 @@
 				</c:forEach>
 			</c:otherwise>
 		</c:choose>
+	</table>
+	<table border="1" width="90%">
+		<tr>
+			<td align="center">
+				${pagingImg }
+			</td>
+		</tr>
 	</table>
 </div>
 </body>

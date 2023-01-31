@@ -19,6 +19,7 @@ import springboard.service.EditExecute;
 import springboard.service.IBoardService;
 import springboard.service.ListExecute;
 import springboard.service.PasswordActionExecute;
+import springboard.service.ReplyActionExecute;
 import springboard.service.ReplyExecute;
 import springboard.service.ViewExecute;
 import springboard.service.WriteActionExecute;
@@ -214,4 +215,20 @@ public class BoardController {
 		model.addAttribute("idx", req.getParameter("idx"));
 		return "07Board/reply";
 	}
+	//답변글 쓰기 처리
+	@RequestMapping("/board/replyAction.do")
+	public String replyAction(HttpServletRequest req, Model model,
+			SpringBoardDTO SpringBoardDTO) {
+		//커맨드객체를 통해 폼값을 한꺼번에 받아서 처리한다.
+		model.addAttribute("SpringBoardDTO", SpringBoardDTO);
+		model.addAttribute("req", req);
+		//서비스객체 생성 및 모델객체를 통해 요청을 전달한다.
+		service = new ReplyActionExecute();
+		service.execute(model);
+		//답변글을 작성한 후 리스트로 이동한다.
+		model.addAttribute("nowPage", req.getParameter("nowPage"));
+		return "redirect:list.do";
+	}
+	
+	
 }
