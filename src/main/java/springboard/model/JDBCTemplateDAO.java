@@ -32,8 +32,10 @@ public class JDBCTemplateDAO {
 	JdbcTemplateConst.template에 할당하였으므로, DB작업을 DAO에서도 수행할 수 있다.
 	*/
 	JdbcTemplate template;
-
+	
+	
 	public JDBCTemplateDAO() {
+		System.out.println("JDBCTemplateDAO()의 멤버변수"+this.template);
 		this.template = JdbcTemplateConst.template;
 		System.out.println("JDBCTemplateDAO() 생성자 호출");
 	}

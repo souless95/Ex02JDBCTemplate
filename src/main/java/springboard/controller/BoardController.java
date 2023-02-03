@@ -44,6 +44,9 @@ public class BoardController {
 	public void setTemplate(JdbcTemplate template) {
 		//멤버변수에 자동주입 받은 빈을 할당한다.
 		this.template = template;
+		
+		System.out.println("template은 "+template);
+		System.out.println("this.template은 "+this.template);
 		//로그를 통해 자동주입 된 것을 확인한다.
 		System.out.println("@Autowired=>JdbcTemplate 연결성공");
 		/*
@@ -51,6 +54,7 @@ public class BoardController {
 		static(정적)변수는 프로그램 시작시 로딩되어 객체생성없이 클래스명 만으로 접근할 수 있는 특징이 있다.
 		*/
 		JdbcTemplateConst.template = this.template;
+		System.out.println("JdbcTemplateConst.template은 "+ JdbcTemplateConst.template);		
 	}
 	
 	/* 멤버변수로 선언하여 클래스에서 전역적으로 사용할 수 있다.
